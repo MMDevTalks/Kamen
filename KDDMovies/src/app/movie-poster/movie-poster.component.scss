@@ -16,7 +16,6 @@
             transition-timing-function: cubic-bezier(0.25, 0.1, 01, 1);
             transform: rotateY(180deg)!important;
             transform-style: preserve-3d;
-            width: 300px;
             &--back{
                 transform: rotateY( 180deg );
             }
