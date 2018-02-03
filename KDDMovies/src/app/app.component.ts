@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from './core/movie.service';
+import { MovieService } from './core/services/movie.service';
 
 @Component({
   selector: 'kdd-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'kdd';
   movies = [];
   selectedMovie: any = null;

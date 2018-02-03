@@ -3,11 +3,7 @@ import { Input } from '@angular/core/';
 
 @Component({
   selector: 'kdd-icon',
-  template: `
-  <svg class="svg-icon" version="1.1" >
-    <use [attr.xlink:href]="'#'+name"></use>
-  </svg>
-  `
+  templateUrl: './icon.component.html'
 })
 export class IconComponent implements OnInit {
   @Input() name: string;

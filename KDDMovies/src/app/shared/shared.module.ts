@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SvgDefinitionsComponent } from './components/svg-definitions/svg-definitions.component';
+import { MoviePosterComponent } from './components/movie-poster/movie-poster.component';
 import { IconComponent } from './components/icon/icon.component';
 import { ButtonComponent } from './components/button/button.component';
 
@@ -8,7 +8,7 @@ import { ButtonComponent } from './components/button/button.component';
   imports: [
     CommonModule
   ],
-  declarations: [SvgDefinitionsComponent, IconComponent, ButtonComponent],
-  exports: [SvgDefinitionsComponent, IconComponent, ButtonComponent]
+  declarations: [MoviePosterComponent, IconComponent, ButtonComponent],
+  exports: [MoviePosterComponent, IconComponent, ButtonComponent]
 })
 export class SharedModule { }
