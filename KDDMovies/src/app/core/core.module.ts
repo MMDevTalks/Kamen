@@ -10,6 +10,8 @@ import { AccountService } from './services/account.service';
 import { APP_INITIALIZER } from '@angular/core';
 import { accountLoader } from './account.loader';
 import { AnonymousGuard } from './guards/anonymous.guard';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './services/auth.interceptor';
 
 
 @NgModule({
@@ -28,7 +30,12 @@ import { AnonymousGuard } from './guards/anonymous.guard';
       provide: APP_INITIALIZER,
       useFactory: accountLoader,
       deps: [AuthService],
-      multi: true
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
     }
   ],
   declarations: [
