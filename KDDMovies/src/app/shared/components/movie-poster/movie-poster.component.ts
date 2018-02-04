@@ -6,7 +6,7 @@ import { Component, OnInit, Input, EventEmitter, Output, HostBinding } from '@an
   styleUrls: ['./movie-poster.component.scss']
 })
 export class MoviePosterComponent implements OnInit {
-  @Input() movie: any = {};
+  @Input() movie: any;
   @Output() selectMovie: EventEmitter<any> = new EventEmitter();
   @HostBinding('class.movie-poster--active') @Input() isSelected = false;
   constructor() { }
