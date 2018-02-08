@@ -12,7 +12,7 @@
             <div class="movie-poster-stats row middle-xs center-xs">
               <kdd-icon name="vote" class="pl-5 pr-5"></kdd-icon> {{movie.vote_count}}
               <kdd-icon name="popularity" class="pl-5 pr-5"></kdd-icon> {{movie.popularity}}
-              <kdd-button class="movie-poster__details-button pl-5">
+              <kdd-button class="movie-poster__details-button pl-5" (click)="showMovieDetails(movie)">
                 <kdd-icon name="info"></kdd-icon>
                 DETAILS
               </kdd-button>

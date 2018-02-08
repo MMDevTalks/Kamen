@@ -1,15 +1,15 @@
 <article class="details">
     
-  <kdd-icon class="details__close-button" name="close"  (click)="closeSelf()"></kdd-icon>
+  <kdd-icon class="details__close-button" name="close"></kdd-icon>
   <!-- <div class="details__navigation">
       <a class="details__navigation-item">Similar</a>
       <a class="details__navigation-item">Recommended</a>
   </div> -->
-  <div (click)="$event.stopPropagation()" *ngIf="(movie$|async) as movie; else loading "> 
-      <div class="details__title">{{movie.title}}</div>
+  <div (click)="$event.stopPropagation()"> 
+      <div class="details__title">{{(movie$|async)?.title}}</div>
       <div class="details__cover" #movieCover></div>
-      <img class="details__image large" mmColorExtractor (colorsExtracted)="morphBackground($event)" crossOrigin="Anonymous" [src]="'https://image.tmdb.org/t/p//w300/'+movie.poster_path">
-      <div class="details__description">{{movie.overview}}</div>
+      <img class="details__image large" crossOrigin="Anonymous" [src]="'https://image.tmdb.org/t/p//w300/'+(movie$|async)?.poster_path">
+      <div class="details__description">{{(movie$|async)?.overview}}</div>
   </div>
     
   <!-- <ng-template #loading>

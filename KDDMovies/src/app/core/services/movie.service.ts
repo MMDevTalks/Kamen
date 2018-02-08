@@ -18,4 +18,8 @@ export class MovieService {
       response.results
     );
   }
+
+  getMovieById(id: string) {
+    return this._http.get(`movie/${id}`);
+  }
 }
